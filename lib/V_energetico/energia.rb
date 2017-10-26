@@ -31,4 +31,13 @@ class Energia
         end
         out        
     end
+    
+    def get_proteinas
+
+        out = ""
+        for i in 0..@proteinas.size-1 do
+            out << "#{@proteinas[i]}\n"
+        end
+        out  
+    end
 end
