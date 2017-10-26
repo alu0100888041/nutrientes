@@ -40,4 +40,13 @@ class Energia
         end
         out  
     end
+    
+    def get_glucidos
+
+        out = ""
+        for i in 0..@glucidos.size-1 do
+            out << "#{@glucidos[i]}\n"
+        end
+        out  
+    end
 end
