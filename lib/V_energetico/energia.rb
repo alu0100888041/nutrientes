@@ -49,4 +49,13 @@ class Energia
         end
         out  
     end
+    
+    def get_lipidos
+
+      out = ""
+        for i in 0..@lipidos.size-1 do
+            out << "#{@lipidos[i]}\n"
+        end
+        out   
+    end
 end
