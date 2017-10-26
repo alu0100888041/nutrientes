@@ -58,4 +58,18 @@ class Energia
         end
         out   
     end
+    
+    def get_valor_energetico
+
+        out = ""
+        
+        for i in 0..@alimento.size-1 do
+            total = 0.0
+            total = (@proteinas[i] + @glucidos[i]) * 4 + @lipidos[i] * 9 
+            @valor_ener[i] = total.round(2)
+            out << @valor_ener[i].to_s
+            out << "\n"
+        end
+        out       
+    end
 end
