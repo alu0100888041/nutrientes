@@ -22,4 +22,13 @@ class Energia
         end
         out
     end
+    
+    def get_nombre
+        
+        out = ""
+        for i in 0..@alimento.size-1 do
+            out << "#{@alimento[i]}\n"
+        end
+        out        
+    end
 end
