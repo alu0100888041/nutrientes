@@ -26,3 +26,21 @@ class Lista
            "#{sale.value}"
         end
     end
+    
+    def extract_end()
+        if(@size==0)
+           puts "No hay elementos"
+        elsif(@size == 1)
+           sale = Node.new(@final.value,nil,nil)
+           @size-=1
+           @inicio = Node.new(nil,nil,nil)
+           @final = Node.new(nil,nil,nil)
+           "#{sale.value}"
+        elsif(@size > 1)
+           @size-=1
+           sale = Node.new(@tail.value,nil,nil)
+           @final.next.prev = nil
+           @final = @tail.next
+           "#{sale.value}"
+        end
+    end

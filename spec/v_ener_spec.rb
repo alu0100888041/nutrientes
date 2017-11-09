@@ -85,7 +85,7 @@ describe Energia do
     it "Se pueden insertar varios elementos" do
       valor=[1,@huevo_f,2,3]
       valor.each do |i|
-        @list.push("#{i}")
+        @list.insert_single("#{i}")
     end
     
     expect(@list.size).to eq(4)
