@@ -54,6 +54,7 @@ describe Energia do
     before :each do
       @list = Lista.new()
       @huevo_f = Energia.new("Huevo Frito", 14.1, 0.0, 19.5)
+      @chocolate = Energia.new("Chocolate", 5.3, 47.0, 30.0)
     end
     
     it "Existe una lista con su cabeza y con su cola" do
@@ -74,27 +75,25 @@ describe Energia do
     
     it "Se extrae el primer elemento de la lista" do
       @list.insert_single(@huevo_f)
-      expect(@list.extract_beg()).to eq()
+      expect(@list.extract_beg()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
     end
     
     it "Se extrae el último elemento de la lista" do
       @list.insert_single(@huevo_f)
-      expect(@list.extract_end()).to eq()
+      expect(@list.extract_end()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
     end
     
     it "Se pueden insertar varios elementos" do
-      valor=[1,@huevo_f,2,3]
+      valor=[1,@huevo_f,2,@chocolate]
       valor.each do |i|
         @list.insert_single("#{i}")
     end
     
     expect(@list.size).to eq(4)
     expect(@list.extract_end()).to eq("1")
-    expect(@list.extract_beg()).to eq("3")
+    expect(@list.extract_beg()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nChocolate\t\t5.3\t\t47.0\t\t30.0\n")
     expect(@list.size).to eq(2)
-    expect(@list.extract_end()).to eq("Huevo Frito - Proteinas")
+    expect(@list.extract_end()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
   end
-    
-
   
   end

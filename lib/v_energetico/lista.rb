@@ -38,9 +38,9 @@ class Lista
            "#{sale.value}"
         elsif(@size > 1)
            @size-=1
-           sale = Node.new(@tail.value,nil,nil)
+           sale = Node.new(@final.value,nil,nil)
            @final.next.prev = nil
-           @final = @tail.next
+           @final = @final.next
            "#{sale.value}"
         end
     end
@@ -63,4 +63,5 @@ class Lista
           @inicio.prev.next = @inicio
           @size += 1
         end
-    end
+     end
+end
