@@ -1,7 +1,7 @@
 #encoding: UTF-8
 require 'spec_helper'
-require 'lib/v_energetico/energia'
-require 'lib/v_energetico/lista'
+require './lib/v_energetico/energia'
+require './lib/v_energetico/lista'
 
 
 describe Energia do 
@@ -31,18 +31,18 @@ describe Energia do
       @Pera        = Grupo_alimentos.new("Pera", 0.5, 12.7, 0.3, "Frutas")
      end
      
-    describe "expectativas" do
+    describe "Expectativas" do
          
         
-          it "la clase de un objeto" do
+          it "Comprobando la clase de un objeto" do
             expect(@Huevo_frito.class).to eq(Grupo_alimentos)
           end
           
-          it "comprobando is_a" do
+          it "Comprobando is_a" do
             expect(@Huevo_frito.is_a? Energia).to eq(true)
           end
           
-          it "la jerarquia de un objeto" do
+          it "La jerarquia de un objeto" do
             expect(@Huevo_frito.kind_of? Energia).to eq(true)
           end
           
@@ -78,7 +78,7 @@ describe Energia do
       expect(@list.extract_beg()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
     end
     
-    it "Se extrae el último elemento de la lista" do
+    it "Se puede extraer el último elemento de la lista" do
       @list.insert_single(@huevo_f)
       expect(@list.extract_end()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
     end
