@@ -44,3 +44,23 @@ class Lista
            "#{sale.value}"
         end
     end
+    
+     def insert_single(valor) #inicio
+        nuevo= Node.new(valor,nil,@inicio)
+        if (@size < 1)
+          @inicio = Node.new(valor, nil,nil)
+          @final = @inicio
+          @size += 1
+        elsif (@size == 1)
+          @inicio = nuevo
+          @final.next = @inicio
+          @inicio.prev = @final
+          @size += 1
+        elsif (@size > 1)
+          ant_inicio = Node.new(@inicio.value,nuevo,@inicio.prev)
+          ant_inicio.prev.next = ant_inicio
+          @inicio = nuevo
+          @inicio.prev.next = @inicio
+          @size += 1
+        end
+    end
