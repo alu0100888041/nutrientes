@@ -98,4 +98,33 @@ describe Energia do
     expect(@list.extract_end()).to eq("\t\t   Proteínas\tGlúcidos\tLípidos\nHuevo Frito\t\t14.1\t\t0.0\t\t19.5\n")
   end
   
+  describe "Probando enumerable" do
+       
+     it "Maximo" do
+       @list3.insert_single(1)
+       @list3.insert_single(2)
+       @list3.insert_single(3)
+      expect(@list3.max).to eq(3)
+     end
+     it "Minimo" do
+       @list3.insert_single(1)
+       @list3.insert_single(2)
+       @list3.insert_single(3)
+       expect(@list3.min).to eq(1)
+     end
+     it "Ordenar" do
+       @list3.insert_single(1)
+       @list3.insert_single(3)
+       @list3.insert_single(2)
+       expect(@list3.sort).to eq([1,2,3])
+     end
+     
+     it "Detectar" do
+       @list3.insert_single(1)
+       @list3.insert_single(3)
+       @list3.insert_single(4)
+       @list3.insert_single(2)
+       expect(@list3.detect{ |i| i.between?(1,2)}).to eq(1)
+     end
+   end
   end
