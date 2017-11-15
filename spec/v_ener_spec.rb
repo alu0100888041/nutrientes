@@ -47,7 +47,17 @@ describe Energia do
           end
           
     end
-   
+    
+   describe "Comparable" do 
+           
+      it "Igualdad entre menús" do
+          expect(@Huevo_frito < (@Leche_vaca)).to eq(false)
+          expect(@Huevo_frito == (@Leche_vaca)).to eq(false)
+          expect(@Huevo_frito > (@Leche_vaca)).to eq(true)
+      end
+      
+    end
+    
   end
   
   describe Lista do
