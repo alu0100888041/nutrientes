@@ -1,8 +1,11 @@
+#Clase energía
 class Energia
     
     attr_accessor :alimento, :proteinas, :glucidos, :lipidos, :valor_ener
     
     include Comparable
+ 
+ #Nos permite comparar objetos pertenecientes a Energia
  
     def <=>(other) 
         @proteinas <=> other.proteinas
@@ -55,11 +58,8 @@ class Energia
      
     end
     
+    #Calcula el valor energetico de un alimento
     def get_valor_energetico
-
-        
-        
-        
             
             return ((@proteinas + @glucidos) * 4 + @lipidos * 9).round(1)
            
@@ -68,6 +68,7 @@ class Energia
    
 end
 
+#Clase hija de Energia, contiene el nombre de un grupo de alimentos además de un objeto Energía
 class Grupo_alimentos < Energia
 
     attr_accessor :producto, :pr

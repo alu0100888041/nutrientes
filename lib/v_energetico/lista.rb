@@ -1,11 +1,12 @@
 Node= Struct.new(:value, :next, :prev)
 
+#Clase lista
 class Lista
     attr_accessor :inicio, :final, :size
     
     include Enumerable
     
-    #Nos permite enumerar la clase Lista
+    #Nos permite enumerar la clase lista
       def each
         i = @final
         f = @size
@@ -23,6 +24,7 @@ class Lista
         @size = 0
     end
     
+    #Método que nos permite extraer un nodo de la cabeza
     def extract_beg()
         if(@size==0)
            puts "No hay elementos"
@@ -41,6 +43,7 @@ class Lista
         end
     end
     
+    #Método que nos permite extraer un nodo de la cola
     def extract_end()
         if(@size==0)
            puts "No hay elementos"
@@ -59,6 +62,7 @@ class Lista
         end
     end
     
+    #Método que nos permite insertar un nuevo valor por el principio
      def insert_single(valor) #inicio
         nuevo= Node.new(valor,nil,@inicio)
         if (@size < 1)

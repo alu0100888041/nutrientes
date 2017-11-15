@@ -64,7 +64,7 @@ describe Energia do
             
     before :each do
       @list = Lista.new()
-      #@list3 = Lista.new()
+      @list3 = Lista.new()
       @huevo_f = Energia.new("Huevo Frito", 14.1, 0.0, 19.5)
       @chocolate = Energia.new("Chocolate", 5.3, 47.0, 30.0)
     end
