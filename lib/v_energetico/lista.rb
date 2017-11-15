@@ -3,6 +3,20 @@ Node= Struct.new(:value, :next, :prev)
 class Lista
     attr_accessor :inicio, :final, :size
     
+    include Enumerable
+    
+    #Nos permite enumerar la clase Lista
+      def each
+        i = @final
+        f = @size
+        k = 0
+        while (k < f) do
+            yield i.value
+            i = i.next
+            k = k+1
+        end
+      end
+    
     def initialize()
         @inicio= Node.new(nil,nil,nil)
         @final= Node.new(nil,nil,nil)
