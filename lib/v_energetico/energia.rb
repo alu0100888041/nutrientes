@@ -33,12 +33,14 @@ class Energia
         
     end
     
+    #Devuelve el nombre de un alimento
     def get_nombre
         
         out = "#{@alimento}"
         out        
     end
 
+    #Devuelve las proteínas de un alimento
     def get_proteinas
 
         #out = "#{@proteinas}"
@@ -47,11 +49,13 @@ class Energia
         return @proteinas
     end
     
+    #Devuelve los glúcidos de un alimento
     def get_glucidos
 
         return @glucidos 
     end
 
+    #Devuelve los lípidos de un alimento
     def get_lipidos
 
      return @lipidos
