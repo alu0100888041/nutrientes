@@ -2,6 +2,11 @@ class Energia
     
     attr_accessor :alimento, :proteinas, :glucidos, :lipidos, :valor_ener
     
+    include Comparable
+ 
+    def <=>(other) 
+        @proteinas <=> other.proteinas
+    end
     
     def initialize(a,b,c,d)
        
