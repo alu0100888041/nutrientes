@@ -1,0 +1,17 @@
+Wed, 15 Nov 2017 18:50:07 +0000
+./CODE_OF_CONDUCT.md	Mon, 13 Nov 2017 22:31:19 +0000
+./Guardfile	Mon, 13 Nov 2017 22:31:19 +0000
+./v_energetico.gemspec	Mon, 13 Nov 2017 22:31:19 +0000
+./Untitled	Mon, 13 Nov 2017 22:31:19 +0000
+./bin/setup	Mon, 13 Nov 2017 22:31:19 +0000
+./bin/console	Mon, 13 Nov 2017 22:31:19 +0000
+./Gemfile	Mon, 13 Nov 2017 22:31:19 +0000
+./spec/spec_helper.rb	Mon, 13 Nov 2017 22:31:19 +0000
+./spec/v_ener_spec.rb	Wed, 15 Nov 2017 18:36:29 +0000
+./lib/v_energetico/version.rb	Mon, 13 Nov 2017 22:31:19 +0000
+./lib/v_energetico/lista.rb	Wed, 15 Nov 2017 18:44:31 +0000
+./lib/v_energetico/energia.rb	Wed, 15 Nov 2017 18:49:57 +0000
+./lib/v_energetico.rb	Mon, 13 Nov 2017 22:31:19 +0000
+./Rakefile	Mon, 13 Nov 2017 22:31:19 +0000
+./Gemfile.lock	Wed, 15 Nov 2017 14:51:39 +0000
+./README.md	Mon, 13 Nov 2017 22:31:19 +0000
