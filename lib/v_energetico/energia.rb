@@ -33,34 +33,6 @@ class Energia
         
     end
     
-    #Devuelve el nombre de un alimento
-    def get_nombre
-        
-        out = "#{@alimento}"
-        out        
-    end
-
-    #Devuelve las proteínas de un alimento
-    def get_proteinas
-
-        #out = "#{@proteinas}"
-        #out  
-        
-        return @proteinas
-    end
-    
-    #Devuelve los glúcidos de un alimento
-    def get_glucidos
-
-        return @glucidos 
-    end
-
-    #Devuelve los lípidos de un alimento
-    def get_lipidos
-
-     return @lipidos
-     
-    end
     
     #Calcula el valor energetico de un alimento
     def get_valor_energetico
@@ -69,6 +41,7 @@ class Energia
            
               
     end
+    
    
 end
 
@@ -84,21 +57,13 @@ class Grupo_alimentos < Energia
         @nombre_grupo = e
     end
     
-   
-    
-    def add(a,b,c,d)
-        @pr =Node.new(super(a,b,c,d))
-        @producto = @producto.insert_single(pr)
-        
-    end
-    
       
     def to_s
     
-        out = super
-        out << " "
-        out << "#{@group}"
-        out
+        #out = super
+        #out << " "
+        #out << "#{@group}"
+        #out
     end
     
 end
