@@ -41,7 +41,18 @@ class Energia
            
               
     end
-    
+    def indice_glucemico(alimento, glucosa)
+       
+       indice =[],[]
+       al = []
+       gl = []
+       alimento.each_with_index do |val, index|
+       alimento[index].each_with_index{|val,index2| indice[index] << index2 }
+       end
+       
+       
+        
+    end
    
 end
 
