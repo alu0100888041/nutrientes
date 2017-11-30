@@ -194,7 +194,7 @@ describe Energia do
       
     end
     
-    context "Usando Benchmark" do
+    context "Usando el Benchmark" do
       it "Comprobando los métodos de ordenación" do
         #array_alimentos = [@Huevo_frito, @Leche_vaca, @Yogurt]
         #array_num = [3,4,2,1]
